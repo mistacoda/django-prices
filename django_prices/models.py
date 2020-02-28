@@ -78,6 +78,7 @@ class MoneyField(NonDatabaseFieldBase):
         self.amount_field = amount_field
         self.currency_field = currency_field
         self.verbose_name = verbose_name
+        self.unique = False
 
     def __str__(self):
         return "MoneyField(amount_field=%s, currency_field=%s)" % (
@@ -142,6 +143,7 @@ class TaxedMoneyField(NonDatabaseFieldBase):
         self.net_amount_field = net_amount_field
         self.gross_amount_field = gross_amount_field
         self.currency = currency
+        self.unique = False
 
     def __str__(self):
         return (
